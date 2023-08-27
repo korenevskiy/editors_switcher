@@ -4,10 +4,10 @@
 		<description>Editor Switcher Plugin</description>
 		<element>switcher</element>
 		<type>plugin</type>
-		<version>4.1.0</version>
+		<version>5.0.0</version>
 		<downloads>
 			<downloadurl type="full" format="zip">
-				https://github.com/korenevskiy/editors_switcher/archive/refs/tags/v4.1.zip
+				https://github.com/korenevskiy/editors_switcher/archive/refs/tags/v5.0.zip
 			</downloadurl>
 		</downloads>
 		<tags>
@@ -15,7 +15,7 @@
 		</tags>
 		<maintainer>Thomas Hunziker</maintainer>
 		<maintainerurl>https://explorer-office.ru</maintainerurl>
-		<targetplatform name="joomla" version="4.[01]"/>
+		<Xtargetplatform name="joomla" version="4.[01]"/>
 		<client>0</client>
 		<folder>editors</folder>
 	</update>
