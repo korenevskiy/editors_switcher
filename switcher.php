@@ -125,9 +125,13 @@ class plgEditorSwitcher extends CMSPlugin
 	private function setSwitcherEditor($subject, $plugin)
 	{
 		$editor = $plugin->name;
-
-		require_once JPATH_PLUGINS . '/editors/' . $editor . '/' . $editor . '.php';
-		$classname = 'plgEditor' . ucfirst($editor);
+		$editorFirstChar = ucfirst($editor);
+		
+		$filename = JPATH_PLUGINS . '/editors/' . $editor . '/src/Extension/' . $editorFirstChar . '.php';
+		
+		require_once $filename;
+		
+		$classname = "\\Joomla\\Plugin\\Editors\\$editorFirstChar\\Extension\\$editorFirstChar";
 		$lang      = Factory::getLanguage();
 
 		// Load language if not already done.
@@ -138,6 +142,11 @@ class plgEditorSwitcher extends CMSPlugin
 		}
 
 		$this->switcherEditor = new $classname($subject, (array) $plugin);
+		
+		if(empty($this->getApplication()))
+			$this->setApplication(\Joomla\CMS\Factory::getApplication());
+		
+		$this->switcherEditor->setApplication($this->getApplication());
 	}
 
 	/**
