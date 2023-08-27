@@ -1,5 +1,12 @@
 # Joomla Plugin Editors Switcher
 
+
+https://github.com/korenevskiy/editors_switcher/archive/refs/tags/v4.1.zip
+
+```
+https://github.com/korenevskiy/editors_switcher/archive/refs/tags/v4.1.zip
+```
+
 This Joomla Plugin allows to dynamically change the active editor in the Joomla CMS.
 
 To use, install the zipfile and set the "Editors - Switcher" as your editor.
